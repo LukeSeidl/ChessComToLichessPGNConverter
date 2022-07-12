@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
@@ -15,7 +14,7 @@ function App() {
       var hours = Math.trunc((timeRemaining - milliseconds)/ 3600);
       var minutes = Math.trunc(((timeRemaining - milliseconds) - (hours*3600))/60);
       var seconds = Math.trunc((timeRemaining - milliseconds) - (hours*3600)-(minutes*60));
-      var hoursString = hours < 10 ? "0" + hours.toString() : hours.toString();
+      var hoursString = hours.toString();
       var minutesString = minutes < 10 ? "0" + minutes.toString() : minutes.toString();
       var secondsString = seconds < 10 ? "0" + seconds.toString() : seconds.toString();
       return hoursString + ':' + minutesString + ":" + secondsString;
